@@ -16,6 +16,10 @@ const CardsShoppingCart = ({ data }) => {
         setShoppingCart([...lessProduct]);
     }
 
+    if (data.qty === 0) {
+        return null; // Retorna null si la cantidad es cero
+    }
+
     return (
         <div className='cardCC-container'>
             <div className='cardCC-left'>
