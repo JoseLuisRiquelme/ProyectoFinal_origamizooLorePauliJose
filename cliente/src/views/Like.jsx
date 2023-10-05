@@ -16,16 +16,15 @@ const Like = () => {
 
 
   return (
-    <div style={{textAlign: 'center', margin: '2rem'}}> <h1>Tus favoritos</h1>
     <div className="like-container">
-
-      {favoritos.map((ele) => {
-        return (
+      <h1 className="like-title">Tus favoritos</h1>
+      <div className="cards-container">
+        {favoritos.map((ele) => (
           <CardsLiked key={ele.id} data={ele} />
-        )
-      })}
-    </div></div>
-  )
-}
+        ))}
+      </div>
+    </div>
+  );
+};
 
-export default Like
+export default Like;
